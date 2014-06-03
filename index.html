@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+	<head>
+	    <meta charset="utf-8" />
+	    <title>Persons App</title>
+	    <script type="text/javascript" src="resource/js/lib/jquery-1.10.2.js"></script>
+	    <script type="text/javascript" src="resource/js/lib/underscore.js"></script>
+	    <script type="text/javascript" src="resource/js/lib/backbone.js"></script>
+	    <script type="text/javascript" src="resource/js/lib/backbone.localstorage.js"></script>
+	    <script type="text/javascript" src="resource/js/app.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<div id="fill">
+				<table>
+					<tr>
+						<td>Username:</td>
+						<td><input type="text" name="username" /></td>
+					</tr>
+					<tr>
+						<td>Age:</td>
+						<td><input type="text" name="age" /></td>
+					</tr>
+					<tr>
+						<td>Address:</td>
+						<td><input type="text" name="address" /></td>
+					</tr>
+					<tr>
+						<td>
+							<input type="button" id="create" value="save"/>
+						</td>
+						<td>
+							<input type="button" id="showLength" value="length"/>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="persons">
+				Persons : <br/>
+				<ul id="list"></ul>
+			</div>
+		</div>
+		<script type="text/template" id="personView">
+			 <input type="button" name="remove" value="remove" /> - <%= username %> - <%= age %> - <%= address %>
+		</script>
+	</body>
+</html>
