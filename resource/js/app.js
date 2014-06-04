@@ -87,7 +87,9 @@ $(function() {
 			};
 
 			var p = new Person();
-			var result = p.set(obj);
+			if (!p.set(obj, {validate : true})) {
+				return false;
+			}
 
 			var temp = persons.findWhere({username : username});
 
